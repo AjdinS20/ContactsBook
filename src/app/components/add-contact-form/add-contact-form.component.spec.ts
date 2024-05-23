@@ -62,7 +62,8 @@ describe('AddContactFormComponent', () => {
 
   it('should dispatch addContact action on form submit', () => {
     component.contact = {firstName: 'Jane', lastName: 'Doe', phone: '0987654321', email: 'jane.doe@example.com', address: '456 Elm St' };
-    component.onSubmit();
+    const mockEvent = jasmine.createSpyObj('Event', ['preventDefault']);
+    component.onSubmit(mockEvent);
     expect(dispatchSpy).toHaveBeenCalledWith(addContact({ contact: {
       firstName: 'Jane',
       lastName: 'Doe',
