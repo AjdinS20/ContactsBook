@@ -13,7 +13,8 @@ import { FormsModule } from '@angular/forms';
 export class AddContactFormComponent {
   contact: Contact = { firstName: '', lastName: '', phone: '', email: '', address: '' };
   constructor( private store: Store){}
-  onSubmit(){
+  onSubmit(event: Event){
+    event.preventDefault();
     console.log("works");
     this.store.dispatch(addContact({contact: this.contact}));
     this.contact = { firstName: '', lastName: '', phone: '', email: '', address: '' };

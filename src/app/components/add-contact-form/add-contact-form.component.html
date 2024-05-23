@@ -1,8 +1,8 @@
-<form>
+<form (submit)="onSubmit($event)">
   <input type="text" [(ngModel)]="contact.firstName" placeholder="First Name" name="firstName" required>
   <input type="text" [(ngModel)]="contact.lastName" placeholder="Last Name" name="lastName" required>
   <input type="text" [(ngModel)]="contact.phone" placeholder="Phone" name="phone" required>
   <input type="email" [(ngModel)]="contact.email" placeholder="Email" name="email" required>
   <input type="text" [(ngModel)]="contact.address" placeholder="Address" name="address" required>
-  <button type="submit" (click)="onSubmit()">Add</button>
+  <button type="submit" >Add</button>
 </form>
