@@ -22,7 +22,7 @@ input[type="email"] {
   font-size: 16px;
 }
 
-button[type="submit"] {
+button[type="button"] {
   width: 100%;
   padding: 10px;
   background-color: #007BFF;
@@ -34,6 +34,6 @@ button[type="submit"] {
   transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
+button[type="button"]:hover {
   background-color: #0056b3;
 }
