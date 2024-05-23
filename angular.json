@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/contacts-book-task",
             "index": "src/index.html",
-            "baseHref": "/ContactsBook/",
+            "baseHref": "/ContactsBook/browser/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
