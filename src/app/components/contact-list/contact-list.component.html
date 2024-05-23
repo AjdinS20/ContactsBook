@@ -1,5 +1,5 @@
 <table>
-  <tr *ngFor="let contact of contacts$ | async">
+  <tr *ngFor="let contact of contacts$ | async" (click)="selectContact(contact)">
     <td>{{ contact.firstName }}</td>
     <td>{{ contact.lastName }}</td>
     <td></td>

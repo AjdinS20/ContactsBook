@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Contact } from '../../models/contact.model';
 import { selectAllContacts } from '../../store/selectors/contact.selectors';
 import { AppState } from '../../store';
+import { selectContact } from '../../store/actions/contact.actions';
 
 @Component({
   selector: 'app-contact-list',
@@ -22,5 +23,7 @@ export class ContactListComponent implements OnInit {
 
   ngOnInit(): void {} // currently does not need to do anything on init
 
-  //TODO define a selectContact here later on
+  selectContact(contact: Contact){
+    this.store.dispatch(selectContact({contact}));
+  }
 }
