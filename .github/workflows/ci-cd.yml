@@ -25,18 +25,22 @@ jobs:
       run: npm install
 
     - name: Install Firefox
-      run: sudo apt-get install -y firefox
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y firefox
+        sudo apt-get install -y libgtk-3-0 libdbus-glib-1-2 libxt6
 
     - name: Build the application
       run: npm run build
 
-    - name: Installed browsers
-      run: firefox --version
-
     - name: Run tests
       env:
         CI: true
-      run: npm test
+        DISPLAY: ':99.0'
+      run: |
+        Xvfb :99 -ac &
+        sleep 3
+        npm test
 
   deploy:
     runs-on: ubuntu-latest

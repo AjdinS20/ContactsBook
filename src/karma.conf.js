@@ -10,7 +10,7 @@ module.exports = function (config) {
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     client: {
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+      clearContext: false
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, '../coverage'),
@@ -32,7 +32,7 @@ module.exports = function (config) {
       }
     },
     browserDisconnectTolerance: 2,
-    browserNoActivityTimeout: 50000,
-    captureTimeout: 60000,
+    browserNoActivityTimeout: 120000,
+    captureTimeout: 120000,
   });
 };
