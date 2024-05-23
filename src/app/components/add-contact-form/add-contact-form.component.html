@@ -4,5 +4,5 @@
   <input type="text" [(ngModel)]="contact.phone" placeholder="Phone" name="phone" required>
   <input type="email" [(ngModel)]="contact.email" placeholder="Email" name="email" required>
   <input type="text" [(ngModel)]="contact.address" placeholder="Address" name="address" required>
-  <button type="submit">Add</button>
+  <button type="submit" (click)="onSubmit()">Add</button>
 </form>
