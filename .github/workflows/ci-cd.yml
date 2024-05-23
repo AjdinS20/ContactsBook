@@ -64,4 +64,3 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist/contacts-book-task
         publish_branch: gh-pages
-        destination_dir: '/'
