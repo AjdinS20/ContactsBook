@@ -1,6 +1,7 @@
 {
   "name": "contacts-book-task",
   "version": "0.0.0",
+  "homepage": "https://AjdinS20.github.io/ContactsBook/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
