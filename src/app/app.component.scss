@@ -1,0 +1,38 @@
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.app-container h1 {
+  text-align: center;
+  color: #333;
+}
+
+.app-container app-add-contact-form {
+  margin-bottom: 20px;
+}
+
+.contacts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contacts-wrapper app-contact-list,
+.contacts-wrapper app-contact-detail {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .contacts-wrapper {
+    flex-direction: column;
+  }
+}
