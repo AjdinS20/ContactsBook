@@ -1,10 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-
+import { provideMockStore } from '@ngrx/store/testing';
+import { AddContactFormComponent } from './components/add-contact-form/add-contact-form.component';
+import { ContactListComponent } from './components/contact-list/contact-list.component';
+import { ContactDetailComponent } from './components/contact-detail/contact-detail.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [AppComponent, AddContactFormComponent, ContactListComponent, ContactDetailComponent],
+      providers: [provideMockStore({})]
     }).compileComponents();
   });
 
@@ -24,6 +28,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ContactsBookTask');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Contacts Management');
   });
 });
